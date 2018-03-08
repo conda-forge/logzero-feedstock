@@ -1,6 +1,6 @@
 {% set name = "logzero" %}
-{% set version = "1.4.0" %}
-{% set sha256 = "b1eeea024c6abb38a088231c79712a811b51ac893ba1ab0ce4f5b4219bf86f2e" %}
+{% set version = "1.5.0" %}
+{% set sha256 = "34fa1e2e436dfa9f37e5ff8750e932bafe0c5abbb42e1f669e4cf5ce1f179142" %}
 
 package:
   name: {{ name|lower }}
