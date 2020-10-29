@@ -1,19 +1,17 @@
 {% set name = "logzero" %}
 {% set version = "1.6.2" %}
-{% set sha256 = "7d1234dbdef8126b6ace4d15cf8a60418506355b2ad967e117d907026cf4f2b5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 7d1234dbdef8126b6ace4d15cf8a60418506355b2ad967e117d907026cf4f2b5
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
