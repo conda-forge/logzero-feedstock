@@ -1,19 +1,17 @@
 {% set name = "logzero" %}
-{% set version = "1.5.0" %}
-{% set sha256 = "34fa1e2e436dfa9f37e5ff8750e932bafe0c5abbb42e1f669e4cf5ce1f179142" %}
+{% set version = "1.6.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 7d1234dbdef8126b6ace4d15cf8a60418506355b2ad967e117d907026cf4f2b5
 
 build:
-  number: 1003
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,7 +30,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python logging made easy'
+  summary: Python logging made easy
   description: |
     Robust and effective logging for Python 2 and 3.
   doc_url: https://logzero.readthedocs.io/
