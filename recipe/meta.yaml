@@ -1,5 +1,5 @@
 {% set name = "logzero" %}
-{% set version = "1.6.3" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1435284574e409b8ec8b680f276bca04cab41f93d6eff4dc8348b7630cddf560
+  sha256: 7f73ddd3ae393457236f081ffebd044a3aa2e423a47ae6ddb5179ab90d0ad082
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
